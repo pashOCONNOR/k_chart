@@ -33,7 +33,7 @@ abstract class BaseChartRenderer<T> {
     ..isAntiAlias = true
     ..filterQuality = FilterQuality.high
     ..strokeWidth = 1.0
-    ..color = Colors.white12;
+    ..color = Color(0x06A86A9C1);
 
   Paint backgroundPaint = Paint()
     ..isAntiAlias = true
