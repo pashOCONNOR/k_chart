@@ -377,23 +377,12 @@ class _KChartWidgetState extends State<KChartWidget>
             ),
             width: mWidth / 3.5,
             decoration: BoxDecoration(
-              color: ChartColors.selectFillColor,
+              color: Theme.of(context).scaffoldBackgroundColor,
               border: Border.all(
-                color: ChartColors.selectBorderColor,
+                color: Theme.of(context).hintColor.withOpacity(0.05),
                 width: 0.5,
               ),
               borderRadius: BorderRadius.circular(2.0),
-              boxShadow: [
-                BoxShadow(
-                  color: Colors.black38,
-                  blurRadius: 10.0, // has the effect of softening the shadow
-                  spreadRadius: 3.0, // has the effect of extending the shadow
-                  offset: Offset(
-                    2.0, // horizontal, move right 10
-                    2.0, // vertical, move down 10
-                  ),
-                )
-              ],
             ),
             child: ListView.builder(
               padding: EdgeInsets.all(4),
@@ -415,13 +404,11 @@ class _KChartWidgetState extends State<KChartWidget>
   }
 
   Widget _buildItem(String info, String infoName) {
-    Color color = Colors.white;
+    Color color = Color(0xFF8D9192);
     if (info.startsWith("+")) {
       color = ChartColors.upColor;
     } else if (info.startsWith("-")) {
       color = ChartColors.dnColor;
-    } else {
-      color = Colors.white;
     }
     return Row(
       mainAxisAlignment: MainAxisAlignment.start,
@@ -431,7 +418,7 @@ class _KChartWidgetState extends State<KChartWidget>
           child: Text(
             "$infoName",
             style: const TextStyle(
-              color: Colors.white,
+              color: Color(0xFF8D9192),
               fontSize: 9.0,
             ),
           ),
