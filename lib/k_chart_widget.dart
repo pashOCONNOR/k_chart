@@ -216,13 +216,13 @@ class _KChartWidgetState extends State<KChartWidget>
       onLongPressStart: (details) {
         isLongPress = true;
         if (mSelectX != details.globalPosition.dx) {
-          mSelectX = details.globalPosition.dx;
+          mSelectX = details.globalPosition.dx + 40;
           notifyChanged();
         }
       },
       onLongPressMoveUpdate: (details) {
         if (mSelectX != details.globalPosition.dx) {
-          mSelectX = details.globalPosition.dx;
+          mSelectX = details.globalPosition.dx + 40;
           notifyChanged();
         }
       },
