@@ -83,6 +83,7 @@ class KChartWidget extends StatefulWidget {
   /// Used to format prices in different places.
   /// For example at the right side of K-Chart
   final int pricePrecision;
+  final int amountPrecision;
 
   KChartWidget(
     this.datas, {
@@ -119,6 +120,7 @@ class KChartWidget extends StatefulWidget {
     this.kdjMaPeriod1 = 3,
     this.kdjMaPeriod2 = 3,
     this.pricePrecision = defaultPricePrecision,
+    this.amountPrecision = defaultAmountPrecision
   }) : assert(maDayList != null);
 
   @override
@@ -349,10 +351,11 @@ class _KChartWidgetState extends State<KChartWidget>
           ChartFormats.money[widget.pricePrecision].format(entity.high),
           ChartFormats.money[widget.pricePrecision].format(entity.low),
           ChartFormats.money[widget.pricePrecision].format(entity.close),
-          widget.shortFormatter != null
-              ? widget.shortFormatter(entity.vol.toInt())
-              : ChartFormats.numberShort.format(entity.vol),
-          '${change > 0 ? '+' : ''}${change.toStringAsFixed(widget.fixedLength)}',
+          ChartFormats.money[widget.amountPrecision].format(entity.vol),
+          // widget.shortFormatter != null
+          //     ? widget.shortFormatter(entity.vol.toInt())
+          //     : ChartFormats.numberShort.format(entity.vol),
+          '${change > 0 ? '+' : ''}${change.toStringAsFixed(widget.pricePrecision)}',
           '${changePercent > 0 ? '+' : ''}${changePercent.toStringAsFixed(2)}%',
         ];
 
@@ -375,7 +378,7 @@ class _KChartWidgetState extends State<KChartWidget>
             padding: EdgeInsets.symmetric(
               horizontal: 3.0,
             ),
-            width: mWidth / 3.5,
+            width: mWidth / 3,
             decoration: BoxDecoration(
               color: Theme.of(context).scaffoldBackgroundColor,
               border: Border.all(
