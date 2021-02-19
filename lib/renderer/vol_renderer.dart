@@ -145,13 +145,11 @@ class VolRenderer extends BaseChartRenderer<VolumeEntity> {
 
   @override
   void drawRightText(Canvas canvas, Size size, textStyle, int gridRows) {
-    final values = [maxValue.toInt(), maxValue ~/ 2];
+    final values = [maxValue, maxValue / 2];
 
     values.forEach((v) {
       TextSpan span = TextSpan(
-        text: shortFormatter != null
-            ? shortFormatter(v)
-            : ChartFormats.money[amountPrecision].format(v),
+        text: ChartFormats.money[amountPrecision].format(v),
         style: textStyle,
       );
       TextPainter tp = TextPainter(
