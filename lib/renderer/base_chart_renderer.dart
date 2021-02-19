@@ -21,7 +21,7 @@ abstract class BaseChartRenderer<T> {
   // (prices near the chart). Also can be used for any prices
   // on the chart.
   int pricePrecision;
-
+  int amountPrecision;
   Paint chartPaint = Paint()
     ..isAntiAlias = true
     ..filterQuality = FilterQuality.high
@@ -49,6 +49,7 @@ abstract class BaseChartRenderer<T> {
     this.fontFamily,
     this.bgColor,
     this.pricePrecision,
+    this.amountPrecision
   }) {
     if (maxValue == minValue) {
       maxValue *= 1.5;

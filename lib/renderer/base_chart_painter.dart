@@ -54,6 +54,7 @@ abstract class BaseChartPainter extends CustomPainter {
   final int kdjMaPeriod1;
   final int kdjMaPeriod2;
   final int pricePrecision;
+  final int amountPrecision;
 
   BaseChartPainter({
     @required this.datas,
@@ -74,6 +75,7 @@ abstract class BaseChartPainter extends CustomPainter {
     this.kdjMaPeriod1,
     this.kdjMaPeriod2,
     this.pricePrecision,
+    this.amountPrecision
   }) {
     mItemCount = datas?.length ?? 0;
     mDataLen = mItemCount * mPointWidth;

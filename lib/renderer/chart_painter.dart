@@ -90,6 +90,7 @@ class ChartPainter extends BaseChartPainter {
     int kdjMaPeriod1,
     int kdjMaPeriod2,
     int pricePrecision,
+    int amountPrecision,
   })  : assert(bgColor == null || bgColor.length >= 2),
         super(
           datas: datas,
@@ -151,6 +152,7 @@ class ChartPainter extends BaseChartPainter {
       fontFamily: fontFamily,
       bgColor: bgColor,
       pricePrecision: pricePrecision,
+      amountPrecision: amountPrecision
     );
     if (mSecondaryRect != null)
       mSecondaryRenderer ??= SecondaryRenderer(

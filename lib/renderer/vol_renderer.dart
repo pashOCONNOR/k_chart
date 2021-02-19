@@ -35,6 +35,7 @@ class VolRenderer extends BaseChartRenderer<VolumeEntity> {
     String fontFamily,
     List<Color> bgColor,
     int pricePrecision,
+    int amountPrecision,
   }) : super(
           chartRect: mainRect,
           maxValue: maxValue,
@@ -149,7 +150,7 @@ class VolRenderer extends BaseChartRenderer<VolumeEntity> {
       TextSpan span = TextSpan(
         text: shortFormatter != null
             ? shortFormatter(v)
-            : ChartFormats.numberShort.format(v),
+            : ChartFormats.money[amountPrecision].format(v),
         style: textStyle,
       );
       TextPainter tp = TextPainter(
