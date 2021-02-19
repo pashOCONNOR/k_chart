@@ -111,6 +111,7 @@ class ChartPainter extends BaseChartPainter {
           kdjMaPeriod1: kdjMaPeriod1,
           kdjMaPeriod2: kdjMaPeriod2,
           pricePrecision: pricePrecision,
+          amountPrecision: amountPrecision
         );
 
   @override

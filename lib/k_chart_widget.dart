@@ -262,6 +262,7 @@ class _KChartWidgetState extends State<KChartWidget>
               kdjMaPeriod1: widget.kdjMaPeriod1,
               kdjMaPeriod2: widget.kdjMaPeriod2,
               pricePrecision: widget.pricePrecision,
+              amountPrecision: widget.amountPrecision
             ),
           ),
           _buildInfoDialog()

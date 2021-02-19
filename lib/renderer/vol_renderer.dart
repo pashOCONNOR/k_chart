@@ -45,6 +45,7 @@ class VolRenderer extends BaseChartRenderer<VolumeEntity> {
           fontFamily: fontFamily,
           bgColor: bgColor,
           pricePrecision: pricePrecision,
+          amountPrecision: amountPrecision
         );
 
   @override
