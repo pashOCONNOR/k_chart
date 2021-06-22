@@ -240,6 +240,7 @@ abstract class BaseChartPainter extends CustomPainter {
   }
 
   void getSecondaryMaxMinValue(KLineEntity item) {
+    print(item);
     if (secondaryState == SecondaryState.MACD) {
       mSecondaryMaxValue =
           max(mSecondaryMaxValue, max(item.macd, max(item.dif, item.dea)));

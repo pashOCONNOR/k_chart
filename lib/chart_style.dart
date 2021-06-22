@@ -16,10 +16,10 @@ class ChartColors {
   static const Color bollMiddle = Color(0xFFff1744);
   static const Color bollDown = Color(0xFF2979FF);
   static const Color bollBackground = Color(0x222979FF);
-  static const Color upColor = Color(0xFF03AD90);
-  static const Color dnColor = Color(0xFFD14B64);
+  static const Color upColor = Color.fromRGBO(31, 199, 135, 1.0);
+  static const Color dnColor = Color.fromRGBO(229, 14, 43, 1.0);
   static const Color upColorDark = Color(0xFF03AD90);
-  static const Color dnColorDark = Color(0xFFD14B64);
+  static const Color dnColorDark = Color.fromRGBO(229, 14, 43, 1.0);
   static const Color volColor = Colors.white54;
 
   static const Color macdColor = Color(0xffABB8C1);
@@ -38,11 +38,11 @@ class ChartColors {
   static const Color jColorOpacity70 = Color(0xBFAE8AD9);
   static const Color rsiColorOpacity70 = Color(0xBFE8C55F);
 
-  static const Color defaultTextColor = Color(0xFFABB8C1);
+  static const Color defaultTextColor = Color.fromRGBO(26, 26, 26, 1.0);
 
   // Depth color
-  static const Color depthBuyColor = Color(0xFF03AD90);
-  static const Color depthSellColor = Color(0xFFD14B64);
+  static const Color depthBuyColor = Color.fromRGBO(96, 53, 231, 1.0);
+  static const Color depthSellColor = Color.fromRGBO(229, 14, 43, 1.0);
   // Display the value border color after selection
   static const Color selectBorderColor = Color(0xFF6C7E8A);
   // The fill color of the background of the displayed value after selection
@@ -91,7 +91,7 @@ class ChartStyle {
   //水平交叉线宽度
   static const double hCrossWidth = 0.5;
 
-  static const fontSize = 10.0;
+  static const fontSize = 14.0;
 }
 
 class ChartFormats {

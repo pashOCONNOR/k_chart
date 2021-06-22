@@ -185,6 +185,26 @@ class _KChartWidgetState extends State<KChartWidget>
       mScrollX = mSelectX = 0.0;
       mScaleX = 1.0;
     }
+    // print(widget.datas);
+    // print(widget.mainState);
+    // print(widget.secondaryState);
+    // print(widget.bgColor);
+    // print(widget.fixedLength);
+    // print(widget.isLine);
+    // print(widget.maDayList);
+    // print(widget.shortFormatter);//null
+    // print(widget.fontFamily);//null
+    // print(widget.wordVolume);
+    // print(widget.rsiPeriod);
+    // print(widget.wrPeriod);
+    // print(widget.macdShortPeriod);
+    // print(widget.macdLongPeriod);
+    // print(widget.macdMaPeriod);
+    // print(widget.kdjCalcPeriod);
+    // print(widget.kdjMaPeriod1);
+    // print(widget.kdjMaPeriod2);
+    // print(widget.pricePrecision);
+    // print(widget.amountPrecision);
     return GestureDetector(
       onHorizontalDragDown: (details) {
         _stopAnimation();
@@ -381,7 +401,7 @@ class _KChartWidgetState extends State<KChartWidget>
             ),
             width: mWidth / 3,
             decoration: BoxDecoration(
-              color: Theme.of(context).scaffoldBackgroundColor,
+              color: Color.fromRGBO(220,220,220, 1),
               border: Border.all(
                 color: Theme.of(context).hintColor.withOpacity(0.05),
                 width: 0.5,
@@ -408,9 +428,9 @@ class _KChartWidgetState extends State<KChartWidget>
   }
 
   Widget _buildItem(String info, String infoName) {
-    Color color = Color(0xFF8D9192);
+    Color color = Color.fromRGBO(26, 26, 26, 1.0);
     if (info.startsWith("+")) {
-      color = ChartColors.upColor;
+      color = Color(0xFF03AD90);
     } else if (info.startsWith("-")) {
       color = ChartColors.dnColor;
     }
@@ -422,7 +442,7 @@ class _KChartWidgetState extends State<KChartWidget>
           child: Text(
             "$infoName",
             style: const TextStyle(
-              color: Color(0xFF8D9192),
+              color: Color.fromRGBO(26, 26, 26, 1.0),
               fontSize: 9.0,
             ),
           ),

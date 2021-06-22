@@ -358,7 +358,7 @@ class ChartPainter extends BaseChartPainter {
     TextPainter dateTp = getTextPainter(
       ChartFormats.dateWithTime
           .format(DateTime.fromMillisecondsSinceEpoch(point.time)),
-      bgColor.elementAt(0) ?? Colors.black,
+      Color.fromRGBO(96, 53, 231, 1.0),
       true,
     );
     textWidth = dateTp.width;
@@ -484,7 +484,7 @@ class ChartPainter extends BaseChartPainter {
     var index = calculateSelectedX(selectX);
     KLineEntity point = getItem(index);
     Paint paintY = Paint()
-      ..color = Colors.white54
+      ..color = Color.fromRGBO(96, 53, 231, 1.0)
       ..strokeWidth = ChartStyle.vCrossWidth
       ..isAntiAlias = true;
     double x = getX(index);
