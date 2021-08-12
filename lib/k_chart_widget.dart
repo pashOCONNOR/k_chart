@@ -392,7 +392,7 @@ class _KChartWidgetState extends State<KChartWidget>
         ];
 
         return Positioned(
-          top: 10.0,
+          top: 18.0,
           right: snapshot.data.isLeft ? null : 10.0,
           left: snapshot.data.isLeft ? 10.0 : null,
           child: Container(
@@ -401,7 +401,7 @@ class _KChartWidgetState extends State<KChartWidget>
             ),
             width: mWidth / 3,
             decoration: BoxDecoration(
-              color: Color.fromRGBO(220,220,220, 1),
+              color: Color.fromRGBO(244, 248, 247, 1.0),
               border: Border.all(
                 color: Theme.of(context).hintColor.withOpacity(0.05),
                 width: 0.5,
@@ -443,7 +443,7 @@ class _KChartWidgetState extends State<KChartWidget>
             "$infoName",
             style: const TextStyle(
               color: Color.fromRGBO(26, 26, 26, 1.0),
-              fontSize: 9.0,
+              fontSize: 10.0,
             ),
           ),
         ),
@@ -451,7 +451,7 @@ class _KChartWidgetState extends State<KChartWidget>
           info,
           style: TextStyle(
             color: color,
-            fontSize: 9.0,
+            fontSize: 10.0,
           ),
         ),
       ],

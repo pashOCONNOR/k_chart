@@ -89,6 +89,22 @@ class SecondaryRenderer extends BaseChartRenderer<MACDEntity> {
         break;
       case SecondaryState.RSI:
         drawLine(
+          70,
+          70,
+          canvas,
+          lastX,
+          curX,
+          Color.fromRGBO(26, 26, 26, 0.5),
+        );
+        drawLine(
+          30,
+          30,
+          canvas,
+          lastX,
+          curX,
+          Color.fromRGBO(26, 26, 26, 0.5),
+        );
+        drawLine(
           lastPoint.rsi,
           curPoint.rsi,
           canvas,
@@ -124,10 +140,10 @@ class SecondaryRenderer extends BaseChartRenderer<MACDEntity> {
     double zeroy = getY(0);
     if (curPoint.macd > 0) {
       canvas.drawRect(Rect.fromLTRB(curX - r, macdY, curX + r, zeroy),
-          chartPaint..color = ChartColors.upColor);
+          chartPaint..color = Color.fromRGBO(31, 199, 135, 0.5));
     } else {
       canvas.drawRect(Rect.fromLTRB(curX - r, zeroy, curX + r, macdY),
-          chartPaint..color = ChartColors.dnColor);
+          chartPaint..color = Color.fromRGBO(229, 14, 43, 0.5));
     }
     if (lastPoint.dif != 0) {
       drawLine(lastPoint.dif, curPoint.dif, canvas, lastX, curX,

@@ -8,7 +8,7 @@ import '../entity/k_line_entity.dart';
 class DataUtil {
   static List<KLineEntity> calculate(
     List<KLineEntity> data, {
-    List<int> maDayList = const [5, 10, 20],
+    List<int> maDayList = const [9, 50, 200],
     int bollCalcPeriod = 20,
     int bollBandwidth = 2,
     int macdShortPeriod = 12,

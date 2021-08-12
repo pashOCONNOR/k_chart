@@ -6,7 +6,7 @@ export '../chart_style.dart';
 
 const rightTextAxisLinePadding = 5.0;
 const rightTextScreenSidePadding = 4.0;
-const rightCoverWidth = 40.0;
+const rightCoverWidth = 50.0;
 
 abstract class BaseChartRenderer<T> {
   double maxValue, minValue;
@@ -137,7 +137,7 @@ abstract class BaseChartRenderer<T> {
       fontWeight = FontWeight.w300;
     }
     return TextStyle(
-      fontSize: 8.0,
+      fontSize: 10.0,
       color: color,
       fontFamily: fontFamily,
       fontWeight: fontWeight,

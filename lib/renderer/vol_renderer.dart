@@ -65,19 +65,19 @@ class VolRenderer extends BaseChartRenderer<VolumeEntity> {
           Rect.fromLTRB(curX - r, top, curX + r, bottom),
           chartPaint
             ..color = curPoint.close > curPoint.open
-                ? ChartColors.upColor
-                : ChartColors.dnColor);
+                ? Color.fromRGBO(31, 199, 135, 0.5)
+                : Color.fromRGBO(229, 14, 43, 0.5));
     }
 
-    if (lastPoint.MA5Volume != 0) {
-      drawLine(lastPoint.MA5Volume, curPoint.MA5Volume, canvas, lastX, curX,
-          ChartColors.ma5Color);
-    }
-
-    if (lastPoint.MA10Volume != 0) {
-      drawLine(lastPoint.MA10Volume, curPoint.MA10Volume, canvas, lastX, curX,
-          ChartColors.ma10Color);
-    }
+    // if (lastPoint.MA5Volume != 0) {
+    //   drawLine(lastPoint.MA5Volume, curPoint.MA5Volume, canvas, lastX, curX,
+    //       ChartColors.ma5Color);
+    // }
+    //
+    // if (lastPoint.MA10Volume != 0) {
+    //   drawLine(lastPoint.MA10Volume, curPoint.MA10Volume, canvas, lastX, curX,
+    //       ChartColors.ma10Color);
+    // }
   }
 
   double getVolY(double value) =>

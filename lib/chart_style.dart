@@ -6,37 +6,37 @@ class ChartColors {
 
   static const Color kLineColor = Color(0xff4C86CD);
   static const Color lineFillColor = Color(0xFFD8E2E2);
-  static const Color ma5Color = Color(0xFFECCA67);
-  static const Color ma10Color = Color(0xFF84DFD7);
-  static const Color ma20Color = Color(0xFFAE8AD9);
+  static const Color ma5Color = Color.fromRGBO(164, 171, 169, 1.0);
+  static const Color ma10Color = Color.fromRGBO(229, 14, 43, 0.5);
+  static const Color ma20Color = Color.fromRGBO(96, 53, 231, 0.5);
   static const Color ma5ColorOpacity70 = Color(0xBFECCA67);
   static const Color ma10ColorOpacity70 = Color(0xBF84DFD7);
   static const Color ma20ColorOpacity70 = Color(0xBFAE8AD9);
-  static const Color bollUp = Color(0xFF2979FF);
-  static const Color bollMiddle = Color(0xFFff1744);
-  static const Color bollDown = Color(0xFF2979FF);
-  static const Color bollBackground = Color(0x222979FF);
+  static const Color bollUp = Color.fromRGBO(96, 53, 231, 0.5);
+  static const Color bollMiddle = Color.fromRGBO(96, 53, 231, 0.5);
+  static const Color bollDown = Color.fromRGBO(96, 53, 231, 0.5);
+  static const Color bollBackground = Color.fromRGBO(96, 53, 231, 0.2);
   static const Color upColor = Color.fromRGBO(31, 199, 135, 1.0);
   static const Color dnColor = Color.fromRGBO(229, 14, 43, 1.0);
   static const Color upColorDark = Color(0xFF03AD90);
   static const Color dnColorDark = Color.fromRGBO(229, 14, 43, 1.0);
   static const Color volColor = Colors.white54;
 
-  static const Color macdColor = Color(0xffABB8C1);
-  static const Color difColor = Color(0xffF1D574);
-  static const Color deaColor = Color(0xff84DFD7);
-  static const Color macdColorOpacity70 = Color(0xBFABB8C1);
-  static const Color difColorOpacity70 = Color(0xBFF1D574);
-  static const Color deaColorOpacity70 = Color(0xBF84DFD7);
+  static const Color macdColor = Color.fromRGBO(26, 26, 26, 1.0);
+  static const Color difColor = Color.fromRGBO(31, 199, 135, 1.0);
+  static const Color deaColor = Color.fromRGBO(229, 14, 43, 1.0);
+  static const Color macdColorOpacity70 = Color.fromRGBO(26, 26, 26, 1.0);
+  static const Color difColorOpacity70 = Color.fromRGBO(31, 199, 135, 1.0);
+  static const Color deaColorOpacity70 = Color.fromRGBO(229, 14, 43, 1.0);
 
   static const Color kColor = Color(0xffF1D574);
   static const Color dColor = Color(0xff84DFD7);
   static const Color jColor = Color(0xffAE8AD9);
-  static const Color rsiColor = Color(0xffE8C55F);
+  static const Color rsiColor = Color.fromRGBO(96, 53, 231, 0.5);
   static const Color kColorOpacity70 = Color(0xBFF1D574);
   static const Color dColorOpacity70 = Color(0xBF84DFD7);
   static const Color jColorOpacity70 = Color(0xBFAE8AD9);
-  static const Color rsiColorOpacity70 = Color(0xBFE8C55F);
+  static const Color rsiColorOpacity70 = Color.fromRGBO(96, 53, 231, 1);
 
   static const Color defaultTextColor = Color.fromRGBO(26, 26, 26, 1.0);
 

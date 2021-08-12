@@ -240,7 +240,7 @@ abstract class BaseChartPainter extends CustomPainter {
   }
 
   void getSecondaryMaxMinValue(KLineEntity item) {
-    print(item);
+    // print(item);
     if (secondaryState == SecondaryState.MACD) {
       mSecondaryMaxValue =
           max(mSecondaryMaxValue, max(item.macd, max(item.dif, item.dea)));
@@ -255,8 +255,8 @@ abstract class BaseChartPainter extends CustomPainter {
       }
     } else if (secondaryState == SecondaryState.RSI) {
       if (item.rsi != null) {
-        mSecondaryMaxValue = max(mSecondaryMaxValue, item.rsi);
-        mSecondaryMinValue = min(mSecondaryMinValue, item.rsi);
+        mSecondaryMaxValue = 100;
+        mSecondaryMinValue = 0;
       }
     } else if (secondaryState == SecondaryState.WR) {
       mSecondaryMaxValue = 0;
@@ -336,7 +336,7 @@ abstract class BaseChartPainter extends CustomPainter {
 
   TextStyle getTextStyle(Color color, {bool bold = false}) {
     return TextStyle(
-      fontSize: 8.0,
+      fontSize: 10.0,
       color: color,
       fontFamily: fontFamily,
       fontWeight: bold ? FontWeight.bold : FontWeight.normal,
