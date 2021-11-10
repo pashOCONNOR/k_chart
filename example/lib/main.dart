@@ -279,7 +279,7 @@ class _MyHomePageState extends State<MyHomePage> {
     var url =
         'https://api.huobi.br.com/market/history/kline?period=${period ?? '1day'}&size=300&symbol=btcusdt';
     String result;
-    var response = await http.get(url);
+    var response = await http.get(Uri.parse(url));
     if (response.statusCode == 200) {
       result = response.body;
     } else {
